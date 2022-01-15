@@ -4,13 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?ver=1" type="text/css" />
     <title>Momentum App</title>
   </head>
   <body>
     <div class="snow">
       <canvas id="snow_canvas"></canvas>
     </div>
+    <div class="rain">
+      <canvas id="rain_canvas"></canvas>
+    </div>
+
+    <form class="search" style="display: flex">
+      <button
+        class="img-button"
+        style="margin: 0; padding: 0; background: transparent; border: none"
+        type="submit"
+        name="click"
+        value=""
+      >
+        <i class="fas fa-search"></i>
+      </button>
+      <input
+        class="keyword"
+        type="text"
+        name="search"
+        maxlength="255"
+        value=""
+        autocomplete="off"
+      />
+      <select class="SelectSearch" name="WhichSearch">
+        <option id="google" value="google">Google</option>
+        <option id="naver" value="naver">Naver</option>
+      </select>
+    </form>
+
     <h2
       id="clock"
       style="text-decoration: underline; text-underline-position: under"
@@ -41,12 +69,19 @@
       <span></span>
       <span></span>
     </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/snow.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+
     <footer><script src="js/quotes.js"></script></footer>
   </body>
 </html>

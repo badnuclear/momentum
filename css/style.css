@@ -1,3 +1,9 @@
+@import "reset.css";
+/* Components */
+@import "components/img.css";
+@import "components/login-form.css";
+@import "components/todo-list.css";
+@import "components/search.css";
 .hidden {
   display: none;
 }
@@ -10,20 +16,22 @@ body {
 * {
   box-sizing: border-box;
 }
-img {
+
+.snow canvas {
   position: absolute;
-  opacity: 0.6;
+  opacity: 0.9;
   width: 100%;
   height: 100%;
   left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
-
-.snow canvas {
+.rain canvas {
   position: absolute;
+  opacity: 0.9;
   width: 100%;
   height: 100%;
   left: 0px;
@@ -34,12 +42,6 @@ img {
   pointer-events: none;
 }
 
-input::placeholder {
-  color: whitesmoke;
-}
-input[type="submit"] {
-  display: none;
-}
 #clock {
   position: absolute;
   left: 50%;
@@ -48,59 +50,7 @@ input[type="submit"] {
   font-size: 80px;
   color: white;
 }
-#login-form {
-  position: absolute;
-  text-align: center;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#login-form input {
-  transition: border-color 0.2s ease-in-out;
-}
-#login-form input[type="text"] {
-  border: 0px;
-  border-bottom: 1px solid white;
-  background: none;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-}
-#login-form input:focus {
-  border-color: skyblue;
-  outline: none;
-}
 
-#todo-form {
-  position: absolute;
-  text-align: center;
-  top: 66%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#todo-form input[type="text"] {
-  border: 0px;
-  border-bottom: 1px solid white;
-  background: none;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-}
-#todo-form input:focus {
-  border-color: skyblue;
-  outline: none;
-}
-#greeting {
-  position: absolute;
-  text-align: center;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 30px;
-  opacity: 0.9;
-}
 #weather {
   color: white;
   position: absolute;
@@ -110,26 +60,7 @@ input[type="submit"] {
   opacity: 0.7;
   display: inline-block;
 }
-#todo-listbase {
-  display: flex;
-  width: 500px;
-  height: 100px;
-  position: absolute;
-  text-align: center;
-  top: 76%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  text-align: center;
-  overflow-y: scroll;
-  color: white;
-}
-#todo-list li {
-  list-style: none;
-}
-#todo-list li button {
-  margin-left: 10px;
-}
+
 #quote {
   display: inline-block;
   color: white;
