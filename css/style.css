@@ -29,6 +29,7 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
 .rain canvas {
   position: absolute;
   opacity: 0.9;
@@ -40,6 +41,32 @@ body {
   bottom: 0px;
   z-index: 1;
   pointer-events: none;
+}
+
+input::placeholder {
+  color: whitesmoke;
+}
+input[type="submit"] {
+  display: none;
+}
+
+.snow canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+input::placeholder {
+  color: whitesmoke;
+}
+input[type="submit"] {
+  display: none;
 }
 
 #clock {
