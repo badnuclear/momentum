@@ -12,7 +12,7 @@
   background: none;
   color: #fff;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 #todo-form input:focus {
   border-color: skyblue;
